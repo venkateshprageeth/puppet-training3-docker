@@ -9,7 +9,7 @@ exec { 'rm':
 command => '/bin/docker rm -f $(sudo docker ps -a -q)',
 }
 exec { 'build':
-command => '/bin/docker build /etc/puppet/manifests -t website',
+command => '/bin/docker build . -t website',
 require => Exec['rm']
 }
 exec { 'run':
