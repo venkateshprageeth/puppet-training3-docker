@@ -16,4 +16,3 @@ exec { 'run':
 command => '/bin/docker run -it -d -p 82:80 -d website',
 require => Exec['build'],
 }
-
